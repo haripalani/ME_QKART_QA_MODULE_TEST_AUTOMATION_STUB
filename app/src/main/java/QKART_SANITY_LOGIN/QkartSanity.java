@@ -3,20 +3,26 @@
  */
 package QKART_SANITY_LOGIN;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.Scanner;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class QkartSanity {
 
     public static String lastGeneratedUserName;
 
-    public static ChromeDriver createDriver() {
-        ChromeDriver driver;
-        String driverLocation = "";
-        System.setProperty("webdriver.chrome.driver", driverLocation);
-        System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
-        System.setProperty("webdriver.chrome.verboseLogging", "true");
-        driver = new ChromeDriver();
+
+    public static RemoteWebDriver createDriver() throws MalformedURLException {
+        // Launch Browser using Zalenium
+        final DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName(BrowserType.CHROME);
+        RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:8082/wd/hub"), capabilities);
+
         return driver;
     }
 
@@ -29,7 +35,7 @@ public class QkartSanity {
     /*
      * Testcase01: Verify the functionality of Login button on the Home page
      */
-    public static Boolean TestCase01(ChromeDriver driver) throws InterruptedException {
+    public static Boolean TestCase01(RemoteWebDriver driver) throws InterruptedException {
         Boolean status;
         logStatus("Start TestCase", "Test Case 1: Verify User Registration", "DONE");
         Register registration = new Register(driver);
@@ -61,7 +67,7 @@ public class QkartSanity {
     /*
      * Verify that an existing user is not allowed to re-register on QKart
      */
-    public static Boolean TestCase02(ChromeDriver driver) throws InterruptedException {
+    public static Boolean TestCase02(RemoteWebDriver driver) throws InterruptedException {
         Boolean status;
         logStatus("Start Testcase", "Test Case 2: Verify User Registration with an existing username ", "DONE");
         Register registration = new Register(driver);
@@ -83,11 +89,14 @@ public class QkartSanity {
         return !status;
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, MalformedURLException {
         int totalTests = 2;
         int passedTests = 0;
         Boolean status;
 
+        // Maximize and Implicit Wait for things to initailize
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         try {
             // Execute Test Case 1

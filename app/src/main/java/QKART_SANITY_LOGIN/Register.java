@@ -5,13 +5,14 @@ import java.sql.Timestamp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Register {
-    ChromeDriver driver;
+    RemoteWebDriver driver;
     String url = "https://crio-qkart-frontend-qa.vercel.app/register";
     String lastGeneratedUsername = "";
 
-    public Register(ChromeDriver driver) {
+    public Register(RemoteWebDriver driver) {
         this.driver = driver;
     }
 
