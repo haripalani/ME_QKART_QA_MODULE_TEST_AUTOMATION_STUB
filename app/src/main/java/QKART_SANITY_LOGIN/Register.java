@@ -22,7 +22,6 @@ public class Register {
         }
     }
 
-    // FIXME - Can add comments on what the parameters are eg: makeUsernameDynamic
     public Boolean registerUser(String Username, String Password, Boolean makeUsernameDynamic)
             throws InterruptedException {
         // Find the Username Text Box
