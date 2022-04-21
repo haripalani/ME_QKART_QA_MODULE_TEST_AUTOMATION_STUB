@@ -188,7 +188,7 @@ public class QkartSanity {
         Thread.sleep(5000);
 
         // Search for product and get card content element of search results
-        status = homePage.searchForProduct("UNIFACTOR");
+        status = homePage.searchForProduct("Roadster");
         List<WebElement> searchResults = homePage.getSearchResults();
 
         // Create expected values
