@@ -192,7 +192,7 @@ public class QkartSanity {
         Thread.sleep(5000);
 
         // Search for product and get card content element of search results
-        status = homePage.searchForProduct("Roadster");
+        status = homePage.searchForProduct("Running Shoes");
         List<WebElement> searchResults = homePage.getSearchResults();
 
         // Create expected values
@@ -324,18 +324,18 @@ public class QkartSanity {
 
         // TODO: Login using the newly registed user
 
-        // TODO: Add The Minimalist Slim Leather Watch to cart
+        // TODO: Add Xtend Smart Watch to cart
 
-        // TODO: Add Bonsai Spirit Tree Table Lamp to cart
+        // TODO: Add Yarine Floor Lamp to cart
 
         // update watch quantity to 2
-        homePage.changeProductQuantityinCart("The Minimalist Slim Leather Watch", 2);
+        homePage.changeProductQuantityinCart("Xtend Smart Watch", 2);
 
         // update table lamp quantity to 0
-        homePage.changeProductQuantityinCart("Bonsai Spirit Tree Table Lamp", 0);
+        homePage.changeProductQuantityinCart("Yarine Floor Lamp", 0);
 
         // update watch quantity again to 1
-        homePage.changeProductQuantityinCart("The Minimalist Slim Leather Watch", 1);
+        homePage.changeProductQuantityinCart("Xtend Smart Watch", 1);
 
         homePage.clickCheckout();
 
@@ -362,7 +362,7 @@ public class QkartSanity {
     public static Boolean TestCase07(RemoteWebDriver driver) throws InterruptedException {
         Boolean status = false;
         List<String> expectedResult = Arrays.asList("Stylecon 9 Seater RHS Sofa Set",
-                "Tan Leatherette Weekender Duffle");
+                "Xtend Smart Watch");
 
         logStatus("Start TestCase", "Test Case 7: Verify that cart contents are persisted after logout", "DONE");
 
@@ -379,8 +379,8 @@ public class QkartSanity {
         status = homePage.searchForProduct("Stylecon");
         homePage.addProductToCart("Stylecon 9 Seater RHS Sofa Set");
 
-        status = homePage.searchForProduct("Leatherette");
-        homePage.addProductToCart("Tan Leatherette Weekender Duffle");
+        status = homePage.searchForProduct("Xtend");
+        homePage.addProductToCart("Xtend Smart Watch");
 
         homePage.PerformLogout();
 
