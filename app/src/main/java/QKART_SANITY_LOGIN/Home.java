@@ -38,7 +38,7 @@ public class Home {
         }
     }
 
-        /*
+    /*
      * Returns Boolean if searching for the given product name occurs without any
      * errors
      */
