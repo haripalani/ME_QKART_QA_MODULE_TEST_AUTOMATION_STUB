@@ -23,7 +23,6 @@ public class SearchResult {
         // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 03: MILESTONE 1
         // Find the element containing the title (product name) of the search result and
         // assign the extract title text to titleOfSearchResult
-
         return titleOfSearchResult;
     }
 
@@ -35,7 +34,6 @@ public class SearchResult {
 
             // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 04: MILESTONE 2
             // Find the link of size chart in the parentElement and click on it
-
             return true;
         } catch (Exception e) {
             System.out.println("Exception while opening Size chart: " + e.getMessage());
@@ -74,7 +72,6 @@ public class SearchResult {
              * the element is "SIZE CHART". If the text "SIZE CHART" matches for the
              * element, set status = true , else set to false
              */
-
             return status;
         } catch (Exception e) {
             return status;
@@ -99,7 +96,6 @@ public class SearchResult {
              * Validate that the contents of expectedTableBody are present in the table body
              * in the same order
              */
-      
             return status;
 
         } catch (Exception e) {
@@ -116,7 +112,6 @@ public class SearchResult {
         try {
             // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 04: MILESTONE 2
             // If the size dropdown exists and is displayed return true, else return false
-
             return status;
         } catch (Exception e) {
             return status;

@@ -3,15 +3,13 @@
  */
 package QKART_SANITY_LOGIN;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -19,6 +17,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class QkartSanity {
 
     public static String lastGeneratedUserName;
+
 
     public static RemoteWebDriver createDriver() throws MalformedURLException {
         // Launch Browser using Zalenium
@@ -47,7 +46,6 @@ public class QkartSanity {
         registration.navigateToRegisterPage();
         status = registration.registerUser("testUser", "abc@123", true);
         if (!status) {
-            logStatus("TestCase 1", "Test Case Pass. User Registration Pass", "PASS");
             logStatus("End TestCase", "Test Case 1: Verify user Registration : ", status ? "PASS" : "FAIL");
 
             // Return False as the test case Fails
@@ -98,7 +96,8 @@ public class QkartSanity {
         // Save the last generated username
         lastGeneratedUserName = registration.lastGeneratedUsername;
 
-        // Visit the Registration page and try to register using the previously registered user's credentials
+        // Visit the Registration page and try to register using the previously
+        // registered user's credentials
         registration.navigateToRegisterPage();
         status = registration.registerUser(lastGeneratedUserName, "abc@123", false);
 
@@ -107,7 +106,7 @@ public class QkartSanity {
         logStatus("End TestCase", "Test Case 2: Verify user Registration : ", status ? "FAIL" : "PASS");
         return !status;
     }
-    
+
     /*
      * Verify the functinality of the search text box
      */
@@ -318,15 +317,15 @@ public class QkartSanity {
         Register registration = new Register(driver);
         Login login = new Login(driver);
 
-        // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 05: MILESTONE 4
+        // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 06: MILESTONE 5
 
         // TODO: Register a new user
 
         // TODO: Login using the newly registed user
 
-        // TODO: Add Xtend Smart Watch to cart
+        // TODO: Add "Xtend Smart Watch" to cart
 
-        // TODO: Add Yarine Floor Lamp to cart
+        // TODO: Add "Yarine Floor Lamp" to cart
 
         // update watch quantity to 2
         homePage.changeProductQuantityinCart("Xtend Smart Watch", 2);
@@ -396,7 +395,7 @@ public class QkartSanity {
         homePage.PerformLogout();
         return status;
     }
-    
+
     public static Boolean TestCase08(RemoteWebDriver driver) throws InterruptedException {
         Boolean status;
         logStatus("Start TestCase",
@@ -433,28 +432,27 @@ public class QkartSanity {
         Thread.sleep(3000);
 
         homePage.changeProductQuantityinCart("Stylecon 9 Seater RHS Sofa Set", 10);
-        
+
         homePage.clickCheckout();
-        
+
         Checkout checkoutPage = new Checkout(driver);
         checkoutPage.addNewAddress("Addr line 1 addr Line 2 addr line 3");
         checkoutPage.selectAddress("Addr line 1 addr Line 2 addr line 3");
-        
+
         checkoutPage.placeOrder();
-        
+
         status = checkoutPage.verifyInsufficientBalanceMessage();
-        
+
         logStatus("End TestCase",
                 "Test Case 8: Verify that insufficient balance error is thrown when the wallet balance is not enough: ",
                 status ? "PASS" : "FAIL");
-        
+
         Thread.sleep(3000);
 
         return status;
     }
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
-        // FIXME - To update count
         int totalTests = 0;
         int passedTests = 0;
         Boolean status;
@@ -486,7 +484,7 @@ public class QkartSanity {
             // totalTests += 1;
             // status = TestCase03(driver);
             // if (status) {
-            //     passedTests += 1;
+            // passedTests += 1;
             // }
 
             // System.out.println("");
@@ -495,7 +493,7 @@ public class QkartSanity {
             // totalTests += 1;
             // status = TestCase04(driver);
             // if (status) {
-            //     passedTests += 1;
+            // passedTests += 1;
             // }
 
             // System.out.println("");
@@ -504,26 +502,25 @@ public class QkartSanity {
             // totalTests += 1;
             // status = TestCase05(driver);
             // if (status) {
-            //     passedTests += 1;
+            // passedTests += 1;
             // }
 
             // System.out.println("");
 
-            
             // Execute Test Case 6
             // totalTests += 1;
             // status = TestCase06(driver);
             // if (status) {
-            //     passedTests += 1;
+            // passedTests += 1;
             // }
 
             // System.out.println("");
-            
+
             // Execute Test Case 7
             // totalTests += 1;
             // status = TestCase07(driver);
             // if (status) {
-            //     passedTests += 1;
+            // passedTests += 1;
             // }
 
             // System.out.println("");
@@ -532,11 +529,10 @@ public class QkartSanity {
             // totalTests += 1;
             // status = TestCase08(driver);
             // if (status) {
-            //     passedTests += 1;
+            // passedTests += 1;
             // }
 
             // System.out.println("");
-
         } catch (Exception e) {
             throw e;
         } finally {

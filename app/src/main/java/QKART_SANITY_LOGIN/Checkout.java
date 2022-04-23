@@ -30,7 +30,6 @@ public class Checkout {
              * Click on the "Add new address" button, enter the addressString in the address
              * text box and click on the "ADD" button to save the address
              */
-
             return false;
         } catch (Exception e) {
             System.out.println("Exception occurred while entering address: " + e.getMessage());
@@ -49,7 +48,6 @@ public class Checkout {
              * Iterate through all the address boxes to find the address box with matching
              * text, addressToSelect and click on it
              */
-
             System.out.println("Unable to find the given address");
             return false;
         } catch (Exception e) {
@@ -66,7 +64,6 @@ public class Checkout {
         try {
             // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 05: MILESTONE 4
             // Find the "PLACE ORDER" button and click on it
-
             return false;
 
         } catch (Exception e) {
@@ -81,7 +78,6 @@ public class Checkout {
     public Boolean verifyInsufficientBalanceMessage() {
         try {
             // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 08: MILESTONE 7
-
             return false;
         } catch (Exception e) {
             System.out.println("Exception while verifying insufficient balance message: " + e.getMessage());

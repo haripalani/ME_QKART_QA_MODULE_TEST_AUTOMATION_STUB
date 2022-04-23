@@ -47,7 +47,6 @@ public class Home {
             // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 03: MILESTONE 1
             // Clear the contents of the search box and Enter the product name in the search
             // box
-
             return true;
         } catch (Exception e) {
             System.out.println("Error while searching for a product: " + e.getMessage());
@@ -65,7 +64,6 @@ public class Home {
             // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 03: MILESTONE 1
             // Find all webelements corresponding to the card content section of each of
             // search results
-
             return searchResults;
         } catch (Exception e) {
             System.out.println("There were no search results: " + e.getMessage());
@@ -83,7 +81,6 @@ public class Home {
             // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 03: MILESTONE 1
             // Check the presence of "No products found" text in the web page. Assign status
             // = true if the element is *displayed* else set status = false
-
             return status;
         } catch (Exception e) {
             return status;
@@ -104,7 +101,6 @@ public class Home {
              * 
              * Return true if these operations succeeds
              */
-
             System.out.println("Unable to find the given product");
             return false;
         } catch (Exception e) {
@@ -121,7 +117,6 @@ public class Home {
         try {
             // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 05: MILESTONE 4
             // Find and click on the the Checkout button
-
             return status;
         } catch (Exception e) {
             System.out.println("Exception while clicking on Checkout: " + e.getMessage());
@@ -144,6 +139,7 @@ public class Home {
             // quantity is reached (Note: Keep a look out when then input quantity is 0,
             // here we need to remove the item completely from the cart)
 
+
             return false;
         } catch (Exception e) {
             if (quantity == 0)
@@ -164,6 +160,7 @@ public class Home {
 
             // Iterate through expectedCartContents and check if item with matching product
             // name is present in the cart
+
 
             return true;
 
