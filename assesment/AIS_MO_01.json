@@ -161,12 +161,12 @@
         {
           "object_notation": "COMMAND",
           "operator": "contains",
-          "expected_value": "TypeElement"
+          "expected_value": "Addr line 1 addr Line 2 addr line 3"
         },
         {
           "object_notation": "RESPONSE",
           "operator": "contains",
-          "expected_value": "Addr line 1  addr Line 2  addr line 3"
+          "expected_value": "TypeElement"
         }
       ],
       "error_out": "Testcase05: Entering the address in the address box was not identified",
