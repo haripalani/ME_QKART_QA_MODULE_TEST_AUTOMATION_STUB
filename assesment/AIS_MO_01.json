@@ -180,12 +180,12 @@
         {
           "object_notation": "RESPONSE",
           "operator": "contains",
-          "expected_value": "The Minimalist Slim Leather Watch"
+          "expected_value": "Xtend Smart Watch"
         }
       ],
       "error_out": "Testcase06:  Validation check to read the presence of watch in the cart is not detected",
       "is_enabled": true,
-      "hint": "Are we reading the contents of the cart and ensuring it contains: The Minimalist Slim Leather Watch"
+      "hint": "Are we reading the contents of the cart and ensuring it contains: Xtend Smart Watch"
     },
     {
       "description": "Testcase 06 : Cart Edit ",
