@@ -540,42 +540,7 @@ public class QkartSanity {
             // }
 
             // System.out.println("");
-
-            // Execute Test Case 9
-            // totalTests += 1;
-            // status = TestCase09(driver);
-            // if (status) {
-            // passedTests += 1;
-            // }
-
-            // System.out.println("");
-
-            // Execute Test Case 10
-            // totalTests += 1;
-            // status = TestCase10(driver);
-            // if (status) {
-            // passedTests += 1;
-            // }
-
-            // System.out.println("");
-
-            // Execute Test Case 11
-            // totalTests += 1;
-            // status = TestCase11(driver);
-            // if (status) {
-            // passedTests += 1;
-            // }
-
-            // System.out.println("");
-
-            // Execute Test Case 12
-            // totalTests += 1;
-            // status = TestCase12(driver);
-            // if (status) {
-            // passedTests += 1;
-            // }
-
-            // System.out.println("");
+            
         } catch (Exception e) {
             throw e;
         } finally {
