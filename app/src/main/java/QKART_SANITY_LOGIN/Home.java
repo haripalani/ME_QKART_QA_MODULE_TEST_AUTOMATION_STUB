@@ -124,7 +124,6 @@ public class Home {
         }
     }
 
- 
     /*
      * Return Boolean denoting the status of change quantity of product in cart
      * operation
@@ -149,7 +148,7 @@ public class Home {
         }
     }
 
-   /*
+    /*
      * Return Boolean denoting if the cart contains items as expected
      */
     public Boolean verifyCartContents(List<String> expectedCartContents) {

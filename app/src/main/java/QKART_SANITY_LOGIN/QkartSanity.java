@@ -3,12 +3,19 @@
  */
 package QKART_SANITY_LOGIN;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -33,6 +40,7 @@ public class QkartSanity {
         System.out.println(String.format("%s |  %s  |  %s | %s", String.valueOf(java.time.LocalDateTime.now()), type,
                 message, status));
     }
+
 
     /*
      * Testcase01: Verify the functionality of Login button on the Home page
@@ -118,7 +126,6 @@ public class QkartSanity {
         Home homePage = new Home(driver);
         homePage.navigateToHome();
 
-        // Wait for Page to load
         Thread.sleep(5000);
 
         // Search for the "yonex" product
@@ -187,7 +194,7 @@ public class QkartSanity {
         // Visit home page
         Home homePage = new Home(driver);
         homePage.navigateToHome();
-        // Wait for Page to load
+
         Thread.sleep(5000);
 
         // Search for product and get card content element of search results
@@ -452,6 +459,7 @@ public class QkartSanity {
         return status;
     }
 
+
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
         int totalTests = 0;
         int passedTests = 0;
@@ -527,6 +535,42 @@ public class QkartSanity {
             // Execute Test Case 8
             // totalTests += 1;
             // status = TestCase08(driver);
+            // if (status) {
+            // passedTests += 1;
+            // }
+
+            // System.out.println("");
+
+            // Execute Test Case 9
+            // totalTests += 1;
+            // status = TestCase09(driver);
+            // if (status) {
+            // passedTests += 1;
+            // }
+
+            // System.out.println("");
+
+            // Execute Test Case 10
+            // totalTests += 1;
+            // status = TestCase10(driver);
+            // if (status) {
+            // passedTests += 1;
+            // }
+
+            // System.out.println("");
+
+            // Execute Test Case 11
+            // totalTests += 1;
+            // status = TestCase11(driver);
+            // if (status) {
+            // passedTests += 1;
+            // }
+
+            // System.out.println("");
+
+            // Execute Test Case 12
+            // totalTests += 1;
+            // status = TestCase12(driver);
             // if (status) {
             // passedTests += 1;
             // }

@@ -10,21 +10,19 @@ import org.openqa.selenium.interactions.Actions;
 public class SearchResult {
     WebElement parentElement;
 
-    /*
-     * Store the web element denoting the card content section of a product
-     */
     public SearchResult(WebElement SearchResultElement) {
         this.parentElement = SearchResultElement;
     }
 
     /*
-     * Return title of the product from "parentElement"
+     * Return title of the parentElement denoting the card content section of a
+     * search result
      */
     public String getTitleofResult() {
         String titleOfSearchResult = "";
         // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 03: MILESTONE 1
         // Find the element containing the title (product name) of the search result and
-        // assign the extracted title text to titleOfSearchResult
+        // assign the extract title text to titleOfSearchResult
         return titleOfSearchResult;
     }
 

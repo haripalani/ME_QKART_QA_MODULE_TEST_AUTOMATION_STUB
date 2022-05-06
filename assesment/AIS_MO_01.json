@@ -74,8 +74,7 @@
       "error_out": "Testcase02: No check to ensure that the re-registration was blocked",
       "is_enabled": true,
       "hint": "After re-registration, was the url validated to see if it stayed on the /register page only?"
-    }
-    ,
+    },
     {
       "description": "Testcase 03 : Search Box",
       "validations": [
