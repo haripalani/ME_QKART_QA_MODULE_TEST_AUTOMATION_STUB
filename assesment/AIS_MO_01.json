@@ -120,7 +120,7 @@
       "hint": "Is there code for typing in the text Gesundheit in the search box ?"
     },
     {
-      "description": "Testcase 04 : SizeChart - find ",
+      "description": "Testcase 04 :Verify size chart link presence",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -133,12 +133,12 @@
           "expected_value": "SIZE CHART"
         }
       ],
-      "error_out": "Testcase04: unable to find code that reads the link text SIZE CHART",
+      "error_out": "Testcase04: unable to find code that reads the link text 'SIZE CHART'",
       "is_enabled": true,
-      "hint": "Is there code getting the text of the link element and verify it to be SIZE CHART"
+      "hint": "Is there code getting the text of the link element and verify it to be 'SIZE CHART'"
     },
     {
-      "description": "Testcase 04 : SizeChart",
+      "description": "Testcase 04 : Verify table header content",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -156,7 +156,7 @@
       "hint": "Is there code the table header and ensure that it contains UK/INDIA"
     },
     {
-      "description": "Testcase 05 : Happy Flow",
+      "description": "Testcase 05 : Verify address is being typed in the address box",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -171,10 +171,10 @@
       ],
       "error_out": "Testcase05: Entering the address in the address box was not identified",
       "is_enabled": true,
-      "hint": "Has the address box been filled with the appropriate address: Addr line 1  addr Line 2  addr line 3 "
+      "hint": "Has the address box been filled with the appropriate address: 'Addr line 1 addr Line 2 addr line 3'"
     },
     {
-      "description": "Testcase 06 : Cart Edit ",
+      "description": "Testcase 06 : Verify presence of item in cart",
       "validations": [
         {
           "object_notation": "RESPONSE",
@@ -187,7 +187,7 @@
       "hint": "Are we reading the contents of the cart and ensuring it contains: Xtend Smart Watch"
     },
     {
-      "description": "Testcase 06 : Cart Edit ",
+      "description": "Testcase 06 : Verify place order works correctly",
       "validations": [
         {
           "object_notation": "RESPONSE",
@@ -200,7 +200,7 @@
       "hint": "Is the URL of the final page checked if it contains /thanks ?"
     },
     {
-      "description": "Testcase 07 : Cart persist after logout ",
+      "description": "Testcase 07 : Verify cart content is persisted after logout ",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -218,7 +218,7 @@
       "hint": "Is the contents of the cart checked if it contains the text: Stylecon 9 Seater RHS Sofa Set"
     },
     {
-      "description": "Testcase 08 : balance error",
+      "description": "Testcase 08 : Verify place order fails on low balance",
       "validations": [
         {
           "object_notation": "RESPONSE",
