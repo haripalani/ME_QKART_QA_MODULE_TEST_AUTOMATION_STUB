@@ -76,7 +76,7 @@
       "hint": "After re-registration, was the url validated to see if it stayed on the /register page only?"
     },
     {
-      "description": "Testcase 03 : Search Box",
+      "description": "Testcase 03 : Search Box functionality - valid keyword typed in search box",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -94,7 +94,7 @@
       "hint": "Is there code for typing in yonex in the search box ? "
     },
     {
-      "description": "Testcase 03 : Search Box",
+      "description": "Testcase 03 : Search Box functionality - read search result titles",
       "validations": [
         {
           "object_notation": "RESPONSE",
@@ -107,7 +107,7 @@
       "hint": "Is there code for getting the text of displayed search results as YONEX Smash Badminton Racquet"
     },
     {
-      "description": "Testcase03: Search Box",
+      "description": "Testcase03: Search Box functionality - invalid keyword typed in search box",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -120,7 +120,7 @@
       "hint": "Is there code for typing in the text Gesundheit in the search box ?"
     },
     {
-      "description": "Testcase 04 : SizeChart",
+      "description": "Testcase 04 : SizeChart - find ",
       "validations": [
         {
           "object_notation": "COMMAND",

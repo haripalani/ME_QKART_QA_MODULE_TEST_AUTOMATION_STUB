@@ -5,8 +5,9 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Home {
     RemoteWebDriver driver;
@@ -101,6 +102,12 @@ public class Home {
              * 
              * Return true if these operations succeeds
              */
+            // CRIO_SOLUTION_START_MODULE_TEST_AUTOMATION
+            List<WebElement> gridContent = driver.findElementsByClassName("css-sycj1h");
+            for (WebElement cell : gridContent) {
+                if (cell.findElement(By.className("css-yg30e6")).getText().equals(productName)) {
+                    cell.findElement(By.tagName("button")).click();
+                    // CRIO_SOLUTION_START_MODULE_TEST_AUTOMATION
             System.out.println("Unable to find the given product");
             return false;
         } catch (Exception e) {
