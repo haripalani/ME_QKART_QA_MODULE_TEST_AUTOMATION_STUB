@@ -173,7 +173,7 @@ public class QkartSanity {
         searchResults = homePage.getSearchResults();
         if (searchResults.size() == 0) {
             if (homePage.isNoResultFound()) {
-                logStatus("Step Success", "Successfully validated that no products found message is displayec", "PASS");
+                logStatus("Step Success", "Successfully validated that no products found message is displayed", "PASS");
             }
             logStatus("TestCase 3", "Test Case PASS. Verified that no search results were found for the given text",
                     "PASS");
@@ -449,14 +449,13 @@ public class QkartSanity {
         checkoutPage.selectAddress("Addr line 1 addr Line 2 addr line 3");
 
         checkoutPage.placeOrder();
+        Thread.sleep(3000);
 
         status = checkoutPage.verifyInsufficientBalanceMessage();
 
         logStatus("End TestCase",
                 "Test Case 8: Verify that insufficient balance error is thrown when the wallet balance is not enough: ",
                 status ? "PASS" : "FAIL");
-
-        Thread.sleep(3000);
 
         return status;
     }

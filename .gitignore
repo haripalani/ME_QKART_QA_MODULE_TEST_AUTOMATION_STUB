@@ -5,3 +5,5 @@
 build
 *.class
 app/chromedriver.log
+app/bin
+app/screenshots
