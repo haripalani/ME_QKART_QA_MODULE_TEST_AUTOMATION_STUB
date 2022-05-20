@@ -18,12 +18,3 @@ gradle/** merge=copy-merge
 
 # app/
 app/build.gradle merge=copy-merge
-
-# CRIO_SOLUTION_AND_STUB_ONLY_START_MODULE_XPATH
-app/src/main/java/QKART_SANITY_LOGIN/QkartSanity.java merge=ours
-app/src/main/java/QKART_SANITY_LOGIN/Checkout.java merge=ours
-app/src/main/java/QKART_SANITY_LOGIN/Home.java merge=ours
-app/src/main/java/QKART_SANITY_LOGIN/Login.java merge=ours
-app/src/main/java/QKART_SANITY_LOGIN/Register.java merge=ours
-app/src/main/java/QKART_SANITY_LOGIN/SearchResult.java merge=ours
-# CRIO_SOLUTION_AND_STUB_ONLY_END_MODULE_XPATH
