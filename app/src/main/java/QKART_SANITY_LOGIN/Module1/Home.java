@@ -144,7 +144,7 @@ public class Home {
         } catch (Exception e) {
             if (quantity == 0)
                 return true;
-            System.out.println(("exception occurred when updating cart"));
+            System.out.println("exception occurred when updating cart: " + e.getMessage());
             return false;
         }
     }
