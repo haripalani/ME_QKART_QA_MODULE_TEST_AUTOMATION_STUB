@@ -1,6 +1,11 @@
 # Root folder
 .gitattributes merge=copy-merge
 .gitignore merge=copy-merge
+run_assesment.sh merge=copy-merge
+.run_platform_assesment.sh merge=copy-merge
+.selenium-run.sh merge=copy-merge
+.selenium-setup.sh merge=copy-merge
+settings.gradle merge=copy-merge
 
 # __CRIO__
 __CRIO__/metadata.json merge=copy-merge
