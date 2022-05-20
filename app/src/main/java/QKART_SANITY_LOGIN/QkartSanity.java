@@ -23,6 +23,12 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import QKART_SANITY_LOGIN.Module1.Checkout;
+import QKART_SANITY_LOGIN.Module1.Home;
+import QKART_SANITY_LOGIN.Module1.Login;
+import QKART_SANITY_LOGIN.Module1.Register;
+import QKART_SANITY_LOGIN.Module1.SearchResult;
+
 public class QkartSanity {
 
     public static String lastGeneratedUserName;

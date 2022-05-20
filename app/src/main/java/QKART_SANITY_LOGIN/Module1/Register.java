@@ -1,4 +1,4 @@
-package QKART_SANITY_LOGIN;
+package QKART_SANITY_LOGIN.Module1;
 
 import java.sql.Timestamp;
 
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Register {
     RemoteWebDriver driver;
     String url = "https://crio-qkart-frontend-qa.vercel.app/register";
-    String lastGeneratedUsername = "";
+    public String lastGeneratedUsername = "";
 
     public Register(RemoteWebDriver driver) {
         this.driver = driver;
