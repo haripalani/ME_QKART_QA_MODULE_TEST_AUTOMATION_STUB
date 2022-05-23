@@ -44,5 +44,5 @@ out/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
-.vscode/
+### VS Code ### - needed for debugging
+# .vscode/
